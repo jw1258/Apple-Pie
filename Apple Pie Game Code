@@ -1,0 +1,12 @@
+//
+//  Game.swift
+//  Apple Pie
+//
+//  Created by Joel Walker on 3/14/22.
+//
+
+import Foundation
+struct Game {
+    var word: String
+    var incorrectmovesremaining: Int
+}
