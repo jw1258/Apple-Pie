@@ -1,0 +1,36 @@
+//
+//  ViewController.swift
+//  Apple Pie
+//
+//  Created by Joel Walker on 3/14/22.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+    
+    var listofwords = ["razor", "hall", "toothpick", "sweet", "order", "wrestle"]
+    let incorrectmovesallowed = 7
+    
+    var totalWins = 0
+    var totalLosses = 0
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        newRound()
+    }
+    func newRound () {
+        let newWord = listofwords.removeFirst()
+        currentGame = Game(word: newWord, incorrectmovesremaining: incorrectmovesallowed)
+        
+    }
+        // Do any additional setup after loading the view.
+    }
+    @IBOutlet weak var treeimageview: UIImageView!
+    @IBOutlet weak var correctwordlabel: UILabel!
+    @IBOutlet weak var scorelabel: UILabel!
+    @IBOutlet var letterbuttons: [UIButton]!
+    @IBAction func letterbuttonpressed(_ sender: UIButton) {sender.isEnabled = false
+    }
+    
+
